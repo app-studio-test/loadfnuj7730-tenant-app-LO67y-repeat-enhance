@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadfnuj7730-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadfnuj7730-tenant-component
+    app.kubernetes.io/part-of: loadfnuj7730-tenant-app
+  name: loadfnuj7730-tenant-component
+  namespace: loadfnuj7730-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadfnuj7730-tenant-component
+    weight: null
+status: {}
